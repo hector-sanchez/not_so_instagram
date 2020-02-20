@@ -1,0 +1,13 @@
+default: &default
+ adapter: postgresql
+ pool: 5
+ timeout: 5000
+development:
+ <<: *default
+ database: development_not_so_instagram
+test:
+ <<: *default
+ database: test_not_so_instagram
+production:
+ <<: *default
+ database: production_not_so_instagram
